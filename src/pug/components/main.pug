@@ -1,0 +1,65 @@
+main.wrapper
+    section.new-colection-season
+
+        .new-colection-season-info.flex
+            .new-clock-season-all-img
+                .titleSeason
+                    h2.titlePorten_h2 СЕЗОН 2021/22
+                .new-clock-season-all.flex
+                    .new-clock-season 
+                        .new-clock-season-img
+                            img(src="img/lois.png", alt="")
+                        .new-clock-season-descr
+                            h3.clock_h3 Louis XVI ATHOS
+                            p.clock_p 13 600 грн.  
+                    .new-clock-season 
+                        .new-clock-season-img
+                            img(src="img/carl.png", alt="")
+                        .new-clock-season-descr
+                            h3.clock_h3 Carl von Zeyten
+                            p.clock_p 16 500 грн.  
+                    .new-clock-season 
+                        .new-clock-season-img
+                            img(src="img/jord.png", alt="")
+                        .new-clock-season-descr
+                            h3.clock_h3 JORD AR5905
+                            p.clock_p 65 000 грн.  
+            .new-colection-season-img
+                .new-colection-catalog 
+                    h2.titlePorten_h2 Нова колекція
+                    a(href="") Каталог
+    section.old-colection.flex
+        .old-colection-img 
+        .old-colection-clock 
+            h2.titlePorten_h2 колекція 2018
+            p.info-about-clockP Годинники як інструмент визначення часу давно і надійно прижилися в людській реальності. Романтики та прагматики, художники та бізнесмени, чоловіки та жінки, дорослі та діти - всі хочуть знати котра година в потрібний момент. Скільки хвилин пройшло, скільки залишилося, а ще - які саме моделі і якого бренду виблискують на руці у друга, коханої або конкурента. З давніх часів, коли людина здогадався втикнути в землю паличку та іншою поличкою взявся відміряти рівні проміжки часу на піску, не вщухають суперечки - яким повинний бути годинник? Наручним, або настільним, або настінним, або, нарешті, підлоговим? Чому ж кожен діамантик на безеле або шестерінка в механізмі незмінно змушують гордовито випнутися нижню губу володаря аксесуара, а щоки - роздутися?
+            a(href="") переглянути колекцію
+    section.new-arrivals
+        h2.titlePorten_h2 Нові надходження
+        .new-arrivals-all-content.flex
+            +newArrivalsContent("img/carl.png", "", "Carl von Zeyten", "16 500 грн.")
+            +newArrivalsContent("img/jord.png", "", "JORD AR5905", "65 000 грн.")
+            +newArrivalsContent("img/armani.png", "", "Emporio Armani Sportivo", "165 000 грн.")
+            +newArrivalsContent("img/rolex.png", "", "Rolex Oyster Perpetual", "280 000 грн.")
+            +newArrivalsContent("img/lois.png", "", "Louis XVI ATHOS", "65 000 грн.")
+            +newArrivalsContent("img/fontana.png", "", "U-Boat Italo Fontana", "18 700 грн.")
+            +newArrivalsContent("img/gucci2.png", "", "Gucci Men's G", "38 500 грн.")
+            .new-arrivals-content
+                figure 
+                    ficaption 
+                        .img-content-arrivals.flex.viewAll
+                            img(src="img/jord.png", alt="")
+                            .allClock.flex
+                                a(href="") ПОКАЗАТИ ВСІ
+    section.useful-information
+        h2.titlePorten_h2 Статті та корисна інформація
+        .useful-information-all 
+            +blogItem({ ...blog.blogOne, hashtags: ["#ЕКСКЛЮЗИВ", "#ПРОБРЕНД"] })
+            +blogItem({ ...blog.blogTwo, hashtags: ["#ЕКСКЛЮЗИВ", "#ІСТОРІЯ"] })
+            +blogItem({ ...blog.blogTree, hashtags: ["#ХРОНОГРАФ", "#TISSOT", "#ОГЛЯДГОДИННИКIВ"] })
+
+
+    section.our-partners
+        h2.titlePorten_h2 Наші партнери
+        .our-brand.flex
+            +brand(brands)

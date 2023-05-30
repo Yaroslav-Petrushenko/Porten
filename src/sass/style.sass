@@ -1,0 +1,111 @@
+@import components/mixin
+
+* 
+  @include reset-margin-padding
+
+
+
+a 
+  text-decoration: none
+  display: inline-block
+
+
+ul 
+    align-items: center
+    list-style: none
+a
+    display: inline-block
+    list-style: none
+    text-decoration: none
+
+h1,
+h2,
+h3,
+p,
+a
+  margin: 0
+  font-family: 'Inter'
+  font-weight: 500
+  font-style: normal
+
+
+html 
+  font-family: 'Inter'
+  font-weight: 500
+  font-style: normal
+  font-size: 0.7px
+  +media(500)
+    font-size: 0.8px
+  +media(800)
+    font-size: 0.9px
+  +media(900)
+    font-size: 1px
+  +media(1950)
+    font-size: 1.2px
+
+
+body 
+  margin: 0
+  padding: 0
+  background-color: #000
+
+
+.flex 
+  display: flex
+
+
+.wrapper 
+  width: 100%
+  margin: 0 auto
+  +media(1950)
+    width: 1920rem
+
+.titlePorten_h2
+  position: relative
+  font-family: 'Playfair Display'
+  font-style: normal
+  font-weight: 700
+  font-size: 36px
+  line-height: 48px
+  text-align: center
+  text-transform: uppercase
+  color: #fff
+  &::before
+    content: ""
+    position: absolute
+    left: 50%
+    right: 0
+    bottom: -75%
+    width: 179rem
+    transform: translateX(-50%)
+    border-bottom: 2px solid #fff
+
+.clock_p
+  padding-top: 10rem
+  color: #fff
+  font-family: 'Playfair Display'
+  font-style: normal
+  font-weight: 700
+  font-size: 16px
+  line-height: 21px
+
+.clock_h3
+  padding-top: 10rem
+  font-family: 'Playfair Display'
+  font-style: normal
+  font-weight: 400
+  font-size: 18px
+  line-height: 24px
+  color: #fff
+
+.info-about-clockP
+  color: #fff
+  font-family: 'PT Sans'
+  font-style: normal
+  font-weight: 400
+  font-size: 14px
+  line-height: 150%
+
+@import components/header
+@import components/main
+@import components/footer

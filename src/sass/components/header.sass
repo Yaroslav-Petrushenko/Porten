@@ -1,0 +1,245 @@
+.header 
+    height: 95vh
+    background: linear-gradient(0deg, rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.5)), url(../img/PortenHeader.jpg) 
+    background-size: auto 100%
+    background-position: center
+    background-repeat: no-repeat
+    position: relative
+    // +media(768)
+    //     background-size: 120% auto
+
+.infoBlock
+    max-width: 1100rem
+    justify-content: space-between
+    margin: 0 auto
+    padding: 14rem 0
+
+
+.infoSection 
+    width: 100%
+    background-color: #000000
+    align-items: center
+
+.divider 
+    width: 12rem
+    height: 1px
+    background-color: #969696
+    transform: rotate(90deg)
+    margin: 0 8px
+    
+.contactInfo
+    text-align: center
+    align-items: center
+    a,
+    p
+        color:#969696
+        font-family: 'PT Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 12px
+        line-height: 16px
+        transition: all .7s ease
+        
+.login-registration
+    padding-right: 31rem
+    text-align: center
+    align-items: center
+    cursor: pointer
+    a,
+    p
+        color:#969696
+        font-family: 'PT Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 12px
+        line-height: 16px
+        transition: all .7s ease
+        &:hover
+            color: #fff
+        
+.divider2
+    display: block
+    width: 12rem
+    height: 1px
+    background-color: #969696
+    transform: rotate(-70deg)
+    margin: 0 2px
+        
+.tel 
+    padding-left: 30px
+    background-image: url('../img/tel.svg')
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: 16px 16px
+    cursor: pointer
+    &:hover
+        color: #fff
+    
+.log
+    padding-left: 30px
+    background-image: url('../img/exit.svg')
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: 16px 16px
+
+.header-section
+    background-color: #0F0F0F
+    width: 100%
+    left: 0
+    right: 0
+    transition: all .2s ease
+    z-index: 10
+
+.hambMenu
+    align-items: center
+.headerHid  
+    transform: translateY(-100%)
+
+.top
+    width: 1100rem
+    margin: 0 auto
+    align-items: center
+    justify-content: space-between
+    
+.logo
+    a
+        margin: 0
+        font-size: 24rem
+        color: #ffffff
+        font-weight: 700
+        font-family: 'Post No Bills Jaffna'
+        cursor: pointer
+    
+.top-menu 
+    li
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 80rem
+        padding-left: 31rem
+        padding-right: 31rem
+        transition: all .7s ease
+        cursor: pointer
+        &:hover
+            background-color: #1F1F1F
+            z-index: 100
+            a 
+                color: #fff
+        a 
+            display: block
+            text-transform: uppercase
+            font-size: 14rem
+            letter-spacing: 0rem
+            color: #969696
+            font-weight: 400
+            font-family: "PT Sans"
+            padding: 15px 0px
+            transition: all .7s ease
+            
+            
+.top-menu
+    li:last-child
+        margin-right: 0
+.navmenu
+    text-align: left
+    display: none   
+    +media(900)
+        display: flex
+        position: relative   
+        flex-direction: row
+        top: 0      
+        background: transparent
+
+.hamburger
+    height: 50px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    z-index: 8
+    +media(900)
+        display: none
+    span
+        margin: 4px 0
+        width: 35px
+        height: 3px
+        background-color: #fff
+        border-radius: 5px
+.active-burger 
+    display: inline-block
+    position: absolute
+    ul
+        padding-top: 60rem
+        padding-right: 30rem
+        display: flex
+        justify-content: space-between
+        margin: 0
+        position: fixed
+        flex-direction: column
+        align-items: flex-end
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45))
+        background-size: cover
+        overflow: auto
+    li
+        a
+            display: inline-block
+
+
+.titlePorten
+    position: absolute
+    top: 60%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.titleWelkome
+    margin: 0 auto
+    width: 320rem
+    height: 320rem
+    text-align: center
+    border: 4px solid #fff
+    align-items: center
+
+    h1 
+        position: relative
+        padding-top: 80rem
+        font-family: 'Post No Bills Jaffna'
+        font-style: normal
+        font-weight: 700
+        font-size: 64px
+        line-height: 96px
+        color: #fff
+        &::before
+            content: ""
+            position: absolute
+            left: 50%
+            right: 0
+            bottom: 5%
+            width: 179rem
+            transform: translateX(-50%)
+            border-bottom: 2px solid #fff
+
+    p
+        color: #fff
+        font-family: 'PT Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 22px
+        line-height: 28px
+        text-align: center
+        text-transform: uppercase
+
+.info-about-porten
+    padding-top: 150rem
+    p
+        text-transform: uppercase
+        color: #fff
+        font-family: 'PT Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 24rem
+        text-align: center
+        -webkit-text-stroke: .5px #000

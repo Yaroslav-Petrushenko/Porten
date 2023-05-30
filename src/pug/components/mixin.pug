@@ -1,0 +1,64 @@
+-
+    let blog = {
+        blogOne: {
+            src: "img/ROGER_DUBUIS.jpg",
+            alt: "",
+            title: "ROGER DUBUIS. ЧАСТИНА 1",
+            description: "Цей чемпіон «гіперхорології» став синонімом надмірності й завдяки своїй радикальній скелетонізованій архітектурі неодноразово демонструє пристрасть до годинного вуайєризму. У цій серії з чотирьох статей описується нещодавня подорож на мануфактуру, де можна було спостерігати за виготовленням та оздобленням деталей, а також за збіркою та регулюванням годинників компанії.",
+            hashtags: ["#ЕКСКЛЮЗИВ", "#ПРОБРЕНД"]
+        },
+        blogTwo: {
+            src: "img/hictory_clock.jpg",
+            alt: "",
+            title: "ІСТОРІЯ ЛЮКСОВИХ ГОДИННИКІВ. ЧАСТИНА 1",
+            description: "Історія люксових годинників зародилася дуже давно, вона веде відлік із часів перших годинників у світі. Тоді годинник був розкішшю, яку могла собі дозволити лише найвища еліта суспільства. Навіть не всім, хто має титул і великі гроші, могли виготовити цей розкішний аксесуар. Власне, з того часу мало що змінилося.",
+            hashtags: ["#ЕКСКЛЮЗИВ", "#ІСТОРІЯ"]
+        },
+        blogTree: {
+            src: "img/tissot_prs.jpg",
+            alt: "",
+            title: "ВЕЛИКИЙ ТА СМІЛИВИЙ TISSOT PRS 516 CHRONOGRAPH",
+            description: "На початку цього року компанія Tissot оновила модель PRS 516 Automatic Chronograph, але не пішла вінтажним шляхом. На противагу колекції Heritage із переконливими рімейками вінтажних моделей, PRS 516 – це сучасний хронограф із зухвалим настроєм, безліччю деталей автоспорту й за чудовою ціною.",
+            hashtags: ["#ХРОНОГРАФ", "#TISSOT", "#ОГЛЯДГОДИННИКIВ"]
+        }
+    };
+-
+    let brands = [
+        {url: "#", src: "img/coco.png", alt: "coco"},
+        {url: "#", src: "img/rolex_brand.png", alt: "rolex_brand"},
+        {url: "#", src: "img/breg.png", alt: "breg"},
+        {url: "#", src: "img/haven.png", alt: "haven"},
+
+    ]
+
+mixin brand (items)
+    for item in items 
+        a.br(href=item.url) 
+            img(src=item.src, alt=item.alt)
+
+
+mixin blogItem(blogData)
+    .blog-item.flex
+        .blog-item-img
+            img(src=blogData.src, alt=blogData.alt)
+        .blog-item-descr-info.flex
+            .blog-item-descr
+                h2= blogData.title
+                p= blogData.description
+            .blog-item-btn.flex
+                a.read(href="") читати
+                .hashtag
+                    each hashtag in blogData.hashtags
+                        a.hashtag-button(href='#')= hashtag
+
+
+mixin newArrivalsContent(imageSrc, imageAlt, title, price)
+    .new-arrivals-content 
+        figure 
+            ficaption 
+                .img-content-arrivals.flex
+                    img(src=imageSrc, alt=imageAlt)
+                .description-arrivals 
+                    h2.clock_h3= title
+                    p.clock_p= price
+
