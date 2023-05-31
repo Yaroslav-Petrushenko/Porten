@@ -65,20 +65,29 @@ body
   font-family: 'Playfair Display'
   font-style: normal
   font-weight: 700
-  font-size: 36px
-  line-height: 48px
+  font-size: 20rem
+  line-height: 48rem
   text-align: center
   text-transform: uppercase
   color: #fff
+  min-width: 330rem
+  margin: 0 auto
   &::before
     content: ""
     position: absolute
     left: 50%
     right: 0
-    bottom: -75%
-    width: 179rem
+    bottom: -50%
+    width: 120rem
     transform: translateX(-50%)
-    border-bottom: 2px solid #fff
+    border-bottom: 2rem solid #fff
+    +media(350)
+      bottom: -75%
+
+  +media(860)
+    font-size: 26rem
+  +media(1390)
+    font-size: 36rem
 
 .clock_p
   padding-top: 10rem
@@ -86,25 +95,39 @@ body
   font-family: 'Playfair Display'
   font-style: normal
   font-weight: 700
-  font-size: 16px
-  line-height: 21px
+  font-size: 16rem
+  line-height: 21rem
 
 .clock_h3
   padding-top: 10rem
   font-family: 'Playfair Display'
   font-style: normal
   font-weight: 400
-  font-size: 18px
-  line-height: 24px
+  font-size: 18rem
+  line-height: 24rem
   color: #fff
+
+.clock_h2_arriv
+  padding-top: 10rem
+  font-family: 'Playfair Display'
+  font-style: normal
+  font-weight: 400
+  font-size: 16rem
+  line-height: 24rem
+  color: #fff
+  +media(425)
+    font-size: 18rem
 
 .info-about-clockP
   color: #fff
   font-family: 'PT Sans'
   font-style: normal
   font-weight: 400
-  font-size: 14px
+  font-size: 14rem
   line-height: 150%
+
+.hidden 
+  display: none
 
 @import components/header
 @import components/main

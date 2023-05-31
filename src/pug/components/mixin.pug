@@ -33,7 +33,7 @@
 
 mixin brand (items)
     for item in items 
-        a.br(href=item.url) 
+        a.slides_brand(href=item.url) 
             img(src=item.src, alt=item.alt)
 
 
@@ -59,6 +59,6 @@ mixin newArrivalsContent(imageSrc, imageAlt, title, price)
                 .img-content-arrivals.flex
                     img(src=imageSrc, alt=imageAlt)
                 .description-arrivals 
-                    h2.clock_h3= title
+                    h2.clock_h2_arriv= title
                     p.clock_p= price
 
