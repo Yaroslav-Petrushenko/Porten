@@ -126,10 +126,10 @@
     justify-content: center
 
 .new-arrivals-content 
-    padding: 10rem 
+    padding: 8rem 
     box-sizing: border-box
-    +media(1170)
-        width: 25%
+    // +media(1170)
+    //     width: 25%
 
 .img-content-arrivals
     margin: 0 auto
@@ -141,7 +141,15 @@
     img
         width: 215rem
         height: 265rem
-
+.clock_content
+    position: relative
+    a
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        
 .viewAll 
     position: relative
     &:hover
@@ -208,10 +216,11 @@
     // height: auto
     img
         display: block
-        min-height: 437rem
         width: 100%
         min-width: 437rem
-        // height: auto
+        height: auto
+        +media(1000)
+            min-height: 437rem
 
 .blog-item-descr
     h2 
@@ -279,23 +288,44 @@
     padding-bottom: 106rem
 
 .our-brand
+    max-width: 80%
+    margin: 0 auto
     padding-top: 80rem
     justify-content: center
     overflow: hidden
+    position: relative
+
+.slider_container
+    width: 100%
+    justify-content: center
+    transition: transform 0.3s ease
+    position: relative
+.slider-card
+    min-height: 250rem
+.slides_brand
+    text-align: center
+    // min-width: 25%
+    img
+        width: 70%
+        align-items: center
+        // +media(500)
+        //     width: 100%
+.brands
     a
-        padding: 0 20rem
-
-
+        display: inline-flex
+        justify-content: center
+        text-align: center
+        align-items: center
+        // height: 300rem
+        height: 100%
 .left
-    // position: absolute
+    margin-right: 10rem
     position: relative
     width: 70rem
     height: 70rem
-    // top: 50%
-    // right: 30rem
     border: 2rem solid #FFFFFF99
     border-radius: 50%
-    transform: translateY(-50%)
+    // transform: translateY(-50%)
     background: #FFFFFF0D
     transition: all .3s ease
     z-index: 2
@@ -318,15 +348,13 @@
             border-right: 2rem solid #FFFFFFD9
             border-bottom: 2rem solid #FFFFFFD9
 .right
-    // position: absolute
+    margin-left: 10rem
     position: relative
     width: 70rem
     height: 70rem
-    // top: 50%
-    // left: 100rem
     border: 2rem solid #FFFFFF99
     border-radius: 50%
-    transform: translateY(-50%)
+    // transform: translateY(-50%)
     background: #FFFFFF0D
     transition: all .3s ease
     z-index: 2

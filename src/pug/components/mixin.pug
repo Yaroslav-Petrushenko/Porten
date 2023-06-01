@@ -24,17 +24,20 @@
     };
 -
     let brands = [
-        {url: "#", src: "img/coco.png", alt: "coco"},
-        {url: "#", src: "img/rolex_brand.png", alt: "rolex_brand"},
-        {url: "#", src: "img/breg.png", alt: "breg"},
-        {url: "#", src: "img/haven.png", alt: "haven"},
+        {url: "#", src: "img/coco", alt: "coco"},
+        {url: "#", src: "img/rolex_brand", alt: "rolex_brand"},
+        {url: "#", src: "img/breg", alt: "breg"},
+        {url: "#", src: "img/haven", alt: "haven"},
 
     ]
 
 mixin brand (items)
     for item in items 
         a.slides_brand(href=item.url) 
-            img(src=item.src, alt=item.alt)
+            picture 
+                source(srcset=item.src + ".webp", tipe="image/webp")
+                img(src=item.src + ".png", alt=item.alt)
+            //- img(src=item.src, alt=item.alt)
 
 
 mixin blogItem(blogData)
@@ -54,10 +57,14 @@ mixin blogItem(blogData)
 
 mixin newArrivalsContent(imageSrc, imageAlt, title, price)
     .new-arrivals-content 
-        figure 
+        figure.clock_content
             ficaption 
+                a(href="#") 
                 .img-content-arrivals.flex
-                    img(src=imageSrc, alt=imageAlt)
+                    picture 
+                        source(srcset=imageSrc + ".webp", tipe="image/webp")
+                        img(src=imageSrc + ".png", alt=imageAlt)
+                    //- img(src=imageSrc, alt=imageAlt)
                 .description-arrivals 
                     h2.clock_h2_arriv= title
                     p.clock_p= price

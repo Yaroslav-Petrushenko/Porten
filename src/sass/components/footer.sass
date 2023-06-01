@@ -4,18 +4,17 @@
     background-repeat: no-repeat
     background-size: cover
 .about-company-info
-    // justify-content: space-between
-    // justify-content: center
-    // flex-direction: column
     flex-wrap: wrap
     margin: 0 auto
+    justify-content: start
     text-align: left
     padding-top: 80rem
     padding-bottom: 67rem
     width: 90%
-    +media(1200)
-        max-width: 1110rem
+    +media(1250)
+        // max-width: 1110rem
         // flex-direction: row
+        justify-content: center
         flex-wrap: nowrap
     h2 
         
@@ -38,9 +37,8 @@
 .about-company
     padding-bottom: 30rem
     width: 100%
-    +media(1119)
+    +media(1250)
         max-width: 350rem
-        padding-right: 0
         padding-bottom: 0
 
 .category-compamy 
@@ -49,11 +47,13 @@
     +media(900)
         padding-right: 30rem
     +media(1119)
-        padding-right: 0
+        padding-right: 88rem
+        padding-left: 30rem
         padding-bottom: 0
 
 .category
     flex-direction: column
+    width: 100%
 
 .category a 
     text-align: center
@@ -81,10 +81,10 @@
 
 .form
     padding-top: 26rem
-    text-align: start
+    text-align: center
     align-items: center
     +media(900)
-        text-align: center
+        text-align: start
     input 
         background: rgba(255, 255, 255, 0.4)
         border: none
@@ -106,6 +106,7 @@
     input:focus
         outline: none
     button
+        margin-top: 10rem
         display: inline-block
         color: #fff
         background: #0F0F0F
@@ -117,6 +118,8 @@
         letter-spacing: 0.05em
         transition: all .7s ease
         cursor: pointer
+        +media(350)
+            margin-top: 0
         &:hover
             background:#1F1F1F
 

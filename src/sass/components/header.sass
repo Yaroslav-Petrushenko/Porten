@@ -159,7 +159,18 @@
         flex-direction: row
         top: 0      
         background: transparent
-
+.find_and_basket
+    display: block
+    align-self: center
+    a
+        padding-right: 10rem
+    +media(900)
+        display: none
+.top-menu .findBask:last-child,
+.top-menu .findBask:nth-last-child(2)
+    display: none
+    +media(900)
+        display: block
 .hamburger
     height: 50rem
     display: flex
@@ -177,11 +188,12 @@
 .active-burger 
     display: inline-block
     position: absolute
+    z-index: 1
     ul
         padding-top: 60rem
         padding-right: 30rem
         display: flex
-        justify-content: space-between
+        justify-content: space-evenly
         margin: 0
         position: fixed
         flex-direction: column
@@ -190,11 +202,13 @@
         bottom: 0
         left: 0
         right: 0
-        background: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45))
+        background: linear-gradient(rgba(0, 0, 0, 0.904),rgba(0,0,0,0.904))
         background-size: cover
         overflow: auto
     li
         a
+            font-size: 36rem
+            color: #fff
             display: inline-block
 
 
